@@ -1,0 +1,3 @@
+[submodule "src/modules/gx"]
+	path = src/modules/gx
+	url = git@github.com:cedmax/gx.git
