@@ -1,6 +1,6 @@
 <p align='center'>
   <h1 align='center'>TGR-Games</h1>
-  <h2>Compilation of example games made with prototype of `tr-game-ui` module</h2>
+  <h2>Compilation of example games made with prototype of `tr-games` module</h2>
   <hr />
 </p>
 
@@ -13,7 +13,7 @@ nps
 ```
 
 ## Usage
-
+<!-- 
 (copy/pasted from `src/modules/wizard/README.md`)
 
 ```javascript
@@ -47,7 +47,7 @@ export default function() {
     {...pages}
   </Wizard>
 }
-```
+``` -->
 
 ## File Structure
 

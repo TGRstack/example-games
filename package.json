@@ -1,7 +1,7 @@
 {
-  "name": "tgr-example-wizards",
+  "name": "tgr-example-games",
   "version": "1.0.0",
-  "description": "tr-wizard module examples for the TGRStack starterkit",
+  "description": "tr-games module examples for the TGRStack starterkit",
   "main": "build/index.html",
   "typings": "./build/index",
   "dependencies": {

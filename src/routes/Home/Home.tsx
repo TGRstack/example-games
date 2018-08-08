@@ -15,10 +15,7 @@ function HomeEntrancePage() {
 
       <Gx col={12}>
         <List ordered>
-          {Hello('This is the start of the app"')}
-          {Hello('cp the "Home" folder  to a new route in .src/routes/ to get started"')}
-          {Hello('add the route to "routes/Routes.tsx" to register it with the router')}
-          {Hello('update "header/index.tsx" to add the new route to the navigation')}
+          {Hello('Click "Life" to get Started"')}
         </List>
       </Gx>
     </div>
