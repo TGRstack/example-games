@@ -1,0 +1,18 @@
+@import '../common.scss';
+
+.container {
+  font-size: 1.5rem;
+  @extend ._container;
+}
+.organism {
+  color: blue;
+}
+
+.alive {
+  color: green;
+  font-weight: 700;
+}
+
+.dead {
+  color: red
+}

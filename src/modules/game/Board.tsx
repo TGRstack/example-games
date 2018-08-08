@@ -1,12 +1,14 @@
 import * as cloneDeep from 'lodash.clonedeep'
 import * as React from 'react'
 import { ICell } from '.'
+import { ReactChildrenArr } from '../../types/common'
 import * as S from './Board.scss'
 
 interface IProps {
   height?: number,
   label?: string,
-  pieces: ICell[],
+  positions: ICell[],
+  pieces: ReactChildrenArr,
   width?: number,
 }
 
@@ -44,7 +46,7 @@ export default class GameBoard extends React.Component<IProps, IState> {
   initBoard = () => Array.from(Array(this.props.height)).map(() => Array.from(Array(this.props.width)))
   updateBoard = (board: BoardGrid): BoardGrid => {
     const newBoard = cloneDeep(board)
-    this.props.pieces.forEach(cell => {
+    this.props.positions.forEach(cell => {
       const {x, y, value} = cell
       newBoard[y][x] = value
     })
@@ -52,7 +54,7 @@ export default class GameBoard extends React.Component<IProps, IState> {
     return newBoard
   }
 
-  renderCell(cell: number, dex:  string) {
+  renderCell(value: number, dex:  string) {
     // const getXY = (str: string): IXYPosition => {
       // const parts = str.split('_')
       // return {
@@ -61,12 +63,13 @@ export default class GameBoard extends React.Component<IProps, IState> {
       // }
     // }
     // const {y, x} = getXY(dex)
+    const {pieces} = this.props
     return <div
       className={[S.cell, S.flex_center].join(' ')}
       key={dex}
       // onClick={e => this.handlePlayerMove(e, {y, x})}
     >
-      {`${cell}`}
+      {pieces[value]}
     </div>
   }
 

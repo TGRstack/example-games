@@ -1,0 +1,15 @@
+@import '../common.scss';
+
+.container {
+  font-size: 1.5rem;
+  @extend ._container;
+}
+.space {
+  background-color: lightgreen;
+}
+.active {
+  background-color: white;
+}
+.preview {
+  background-color: lightblue;
+}

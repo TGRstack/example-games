@@ -2,10 +2,13 @@
 import Gx from '@tgrx/gx'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import GameOfLifeBoard from '../../components/game-of-life/LifeBoard'
+import {
+  Board as GameOfLifeBoard,
+  Legend as GameOfLifeLegend,
+} from '../../components/game-of-life'
 // import * as S from './GameOfLife.css'
 
-function SimpleWizard() {
+function GameOfLife() {
   return (
     <div>
       <Helmet>
@@ -15,8 +18,11 @@ function SimpleWizard() {
       <Gx col={12}>
         <GameOfLifeBoard />
       </Gx>
+      <Gx col={12}>
+        <GameOfLifeLegend />
+      </Gx>
     </div>
   )
 }
 
-export default SimpleWizard
+export default GameOfLife

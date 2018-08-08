@@ -1,0 +1,9 @@
+@import '../../helpers/center';
+
+._container {
+  @extend .flex_center;
+
+  border: 1px solid darkgray;
+  height: 100%;
+  width: 100%;
+}
