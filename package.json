@@ -16,6 +16,7 @@
     "graphql": "0.13.2",
     "graphql-tag": "2.9.2",
     "lodash.clonedeep": "4.5.0",
+    "lodash.isequal": "4.5.0",
     "react": "16.4.1",
     "react-apollo": "2.1.5",
     "react-dom": "16.4.1",

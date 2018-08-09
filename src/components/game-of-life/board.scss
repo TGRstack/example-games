@@ -1,0 +1,14 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 20px 10px;
+  box-shadow: 2px 2px darkgray;
+}
+.button {
+  border: 1px solid gray;
+  padding: 5px;
+
+  &:hover {
+    box-shadow: 1px 1px black;
+  }
+}

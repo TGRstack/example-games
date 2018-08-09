@@ -3,7 +3,7 @@ import { ReactChildren } from '../../../../types/common'
 import * as S from './Space.scss'
 
 interface IProps {
-  children: ReactChildren,
+  children?: ReactChildren,
   key?: number,
 }
 

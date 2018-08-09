@@ -1,4 +1,5 @@
 import * as cloneDeep from 'lodash.clonedeep'
+import * as deepEqual from 'lodash.isequal'
 import * as React from 'react'
 import { ICell } from '.'
 import { ReactChildrenArr } from '../../types/common'
@@ -34,9 +35,9 @@ export default class GameBoard extends React.Component<IProps, IState> {
     }
   }
 
-  componentWillReceiveProps(np: IProps) {
+  componentDidUpdate(np: IProps) {
     const cp = this.props
-    if (cp.pieces !== np.pieces)  {
+    if (!deepEqual(cp.positions, np.positions))  {
       this.setState(s => ({
         board: this.updateBoard(s.board)
       }))
@@ -44,6 +45,7 @@ export default class GameBoard extends React.Component<IProps, IState> {
   }
 
   initBoard = () => Array.from(Array(this.props.height)).map(() => Array.from(Array(this.props.width)))
+
   updateBoard = (board: BoardGrid): BoardGrid => {
     const newBoard = cloneDeep(board)
     this.props.positions.forEach(cell => {

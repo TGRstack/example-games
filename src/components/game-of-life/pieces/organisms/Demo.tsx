@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import * as SC from '../../../helpers/center.scss';
 import DeadOrganism from './DeadOrganism'
 import LivingOrganism from './LivingOrganism'
 import Organism from './Organism'

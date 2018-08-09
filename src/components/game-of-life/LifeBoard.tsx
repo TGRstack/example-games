@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { Board, ICell } from '../../modules/game'
+import * as SC from '../helpers/center.scss'
+import * as S from './board.scss'
+import LifeSimulator from './LifeSimulator'
 import Life from './pieces/AliveOrganism'
 import Dead from './pieces/DeadOrganism'
 import NewLife from './pieces/NewOrganism'
@@ -12,17 +15,9 @@ interface IState {
   // next: ICell[],
 }
 
-const startingPositions = (() => {
-  const startingValues = [
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 2, 2, 2, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-  ]
-
+const extractPositionsFromGrid = (cells: number[][]) => {
   const result: ICell[] = []
-  startingValues.forEach((y, yDex) => {
+  cells.forEach((y, yDex) => {
     y.forEach((cell, xDex) => {
       result.push({
         value: cell,
@@ -33,9 +28,25 @@ const startingPositions = (() => {
   })
 
   return result
+}
+const startingPositions = (() => {
+  const startingValues = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 2, 0, 0],
+    [0, 2, 2, 2, 0],
+    [0, 0, 2, 0, 0],
+    [0, 0, 0, 0, 0],
+  ]
+
+  return extractPositionsFromGrid(startingValues)
 })()
 
 export default class LifeBoard extends React.Component<IProps, IState> {
+  height = 5
+  width = 5
+  simulator = new LifeSimulator({
+    grid: this.liveOrDeadGrid(startingPositions)
+  })
 
   constructor(props: IProps) {
     super(props)
@@ -46,10 +57,53 @@ export default class LifeBoard extends React.Component<IProps, IState> {
     }
   }
 
-  // onNext() {
-  //   const next: ICell[] = []
-  //   this.setState({next})
-  // }
+  liveOrDeadGrid(valuedXY: ICell[]) {
+    const newBoard = Array.from(Array(this.height)).map(() => Array.from(Array(this.width)))
+    valuedXY.forEach(cell => {
+      const {x, y, value} = cell
+      let result = 0
+      if (value === 2) result = 1
+      newBoard[y][x] = result
+    })
+
+    return newBoard
+  }
+
+  nextTurn() {
+    this.setState(s => {
+      const next = this.simulator.next()
+      const nextPositions = this.updateBoard(s.curr, next)
+
+      return ({curr: nextPositions})
+    })
+  }
+  updateBoard(_curr: ICell[], next: number[][]): ICell[] {
+    const nextBoard = extractPositionsFromGrid(next).map(c => ({
+      ...c,
+      value: c.value === 1 ? 2 : 0,
+    }))
+    // const nextLiveCells: ICell[] = nextBoard.find(cell => cell.value === 2)
+    // const currLiveCells: ICell[] = curr.find(cell => cell.value === 2)
+    // // console.log({next, nextBoard})
+    return nextBoard
+  }
+
+  renderController() {
+    const Button = ({
+      label,
+      onClick,
+    }: {
+      label: string,
+      onClick?: (event: MouseEvent<HTMLInputElement>) => void
+    }) => <div className={S.button} onClick={onClick}>{label}</div>
+    return <div className={[S.container, SC.flex_spread].join(' ')}>
+      <Button label="Next" onClick={() => this.nextTurn()} />
+      {/* <Button label="1 per 2 seconds" />
+      <Button label="1 per second" />
+      <Button label="2 per second" />
+      <Button label="5 per second" /> */}
+    </div>
+  }
 
   render() {
     /* Values - Pieces
@@ -61,8 +115,8 @@ export default class LifeBoard extends React.Component<IProps, IState> {
 
     return <div>
       <Board
-        height={5}
-        width={5}
+        height={this.height}
+        width={this.width}
         positions={this.state.curr}
         pieces={[
           <EmptySpace key={0} />,
@@ -72,7 +126,7 @@ export default class LifeBoard extends React.Component<IProps, IState> {
         ]}
         // nextChanges={this.state.next} highlight these cells
       />
-      {/* TODO: <GameController /> */}
+      {this.renderController()}
     </div>
   }
 }
