@@ -1,6 +1,6 @@
 export interface ILegendScss {
-  'container': string
-  'section': string
+  'container': string;
+  'section': string;
 }
 
-export const locals: ILegendScss
+export const locals: ILegendScss;

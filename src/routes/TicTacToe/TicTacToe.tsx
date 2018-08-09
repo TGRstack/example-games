@@ -11,7 +11,7 @@ function TicTacToe() {
   return (
     <div>
       <Helmet>
-        <title>Game of Life</title>
+        <title>Tic-Tac-Toe</title>
       </Helmet>
 
       {/* <Gx col={12}>

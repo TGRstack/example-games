@@ -1,5 +1,3 @@
-import * as React from 'react'
+export {default as Board} from './TicTac_Board'
 
-export function Board(): React.PureComponent {
-    return  <div />
-}
+export interface IXYPosition {y: number, x: number}

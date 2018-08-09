@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TicTacToe /> Renders Succesfully 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TicTacBoard
+    size={3}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <GameBoard
+        height={3}
+        label="Game Board"
+        onClick={[Function]}
+        pieces={
+          Array [
+            <div
+              className="space"
+            />,
+            <div
+              className="space piece flex_center"
+            >
+              X
+            </div>,
+            <div
+              className="space piece flex_center"
+            >
+              0
+            </div>,
+          ]
+        }
+        positions={
+          Array [
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 2,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 2,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 2,
+            },
+          ]
+        }
+        width={3}
+      />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "height": 3,
+        "label": "Game Board",
+        "onClick": [Function],
+        "pieces": Array [
+          <div
+            className="space"
+          />,
+          <div
+            className="space piece flex_center"
+          >
+            X
+          </div>,
+          <div
+            className="space piece flex_center"
+          >
+            0
+          </div>,
+        ],
+        "positions": Array [
+          Object {
+            "value": 0,
+            "x": 0,
+            "y": 0,
+          },
+          Object {
+            "value": 0,
+            "x": 1,
+            "y": 0,
+          },
+          Object {
+            "value": 0,
+            "x": 2,
+            "y": 0,
+          },
+          Object {
+            "value": 0,
+            "x": 0,
+            "y": 1,
+          },
+          Object {
+            "value": 0,
+            "x": 1,
+            "y": 1,
+          },
+          Object {
+            "value": 0,
+            "x": 2,
+            "y": 1,
+          },
+          Object {
+            "value": 0,
+            "x": 0,
+            "y": 2,
+          },
+          Object {
+            "value": 0,
+            "x": 1,
+            "y": 2,
+          },
+          Object {
+            "value": 0,
+            "x": 2,
+            "y": 2,
+          },
+        ],
+        "width": 3,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <GameBoard
+          height={3}
+          label="Game Board"
+          onClick={[Function]}
+          pieces={
+            Array [
+              <div
+                className="space"
+              />,
+              <div
+                className="space piece flex_center"
+              >
+                X
+              </div>,
+              <div
+                className="space piece flex_center"
+              >
+                0
+              </div>,
+            ]
+          }
+          positions={
+            Array [
+              Object {
+                "value": 0,
+                "x": 0,
+                "y": 0,
+              },
+              Object {
+                "value": 0,
+                "x": 1,
+                "y": 0,
+              },
+              Object {
+                "value": 0,
+                "x": 2,
+                "y": 0,
+              },
+              Object {
+                "value": 0,
+                "x": 0,
+                "y": 1,
+              },
+              Object {
+                "value": 0,
+                "x": 1,
+                "y": 1,
+              },
+              Object {
+                "value": 0,
+                "x": 2,
+                "y": 1,
+              },
+              Object {
+                "value": 0,
+                "x": 0,
+                "y": 2,
+              },
+              Object {
+                "value": 0,
+                "x": 1,
+                "y": 2,
+              },
+              Object {
+                "value": 0,
+                "x": 2,
+                "y": 2,
+              },
+            ]
+          }
+          width={3}
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "height": 3,
+          "label": "Game Board",
+          "onClick": [Function],
+          "pieces": Array [
+            <div
+              className="space"
+            />,
+            <div
+              className="space piece flex_center"
+            >
+              X
+            </div>,
+            <div
+              className="space piece flex_center"
+            >
+              0
+            </div>,
+          ],
+          "positions": Array [
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 0,
+            },
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 1,
+            },
+            Object {
+              "value": 0,
+              "x": 0,
+              "y": 2,
+            },
+            Object {
+              "value": 0,
+              "x": 1,
+              "y": 2,
+            },
+            Object {
+              "value": 0,
+              "x": 2,
+              "y": 2,
+            },
+          ],
+          "width": 3,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

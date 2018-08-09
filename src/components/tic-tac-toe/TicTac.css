@@ -1,0 +1,41 @@
+/* Helpers that should be moved to a central file once used elsewhere  */
+.flex_center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TicTacToe css */
+.container {
+  min-width: 380px;
+  min-height: 420px;
+}
+
+.board {
+  display: grid;
+  grid-template-areas: 'board'; /*  scores */
+  grid-template-rows:    repeat(3, 120px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 11px;
+  border: 1px solid white;
+  box-shadow: darkgrey 2px 2px;
+}
+
+.cell {
+  background-color: lightgrey;
+  color: #000;
+}
+
+.space {
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.piece {
+  cursor: not-allowed;
+  background-color: lightblue;
+}

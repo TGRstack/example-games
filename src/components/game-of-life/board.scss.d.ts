@@ -1,6 +1,6 @@
 export interface IBoardScss {
-  'container': string
-  'button': string
+  'container': string;
+  'button': string;
 }
 
-export const locals: IBoardScss
+export const locals: IBoardScss;

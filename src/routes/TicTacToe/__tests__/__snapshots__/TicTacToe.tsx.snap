@@ -23,13 +23,15 @@ ShallowWrapper {
           encodeSpecialCharacters={true}
         >
           <title>
-            Game of Life
+            Tic-Tac-Toe
           </title>
         </HelmetWrapper>,
         <Gx
           col={12}
         >
-          <Board />
+          <TicTacBoard
+            size={3}
+          />
         </Gx>,
       ],
     },
@@ -41,7 +43,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <title>
-            Game of Life
+            Tic-Tac-Toe
           </title>,
           "defer": true,
           "encodeSpecialCharacters": true,
@@ -52,10 +54,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Game of Life",
+            "children": "Tic-Tac-Toe",
           },
           "ref": null,
-          "rendered": "Game of Life",
+          "rendered": "Tic-Tac-Toe",
           "type": "title",
         },
         "type": [Function],
@@ -65,15 +67,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Board />,
+          "children": <TicTacBoard
+            size={3}
+          />,
           "col": 12,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "class",
+          "props": Object {
+            "size": 3,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -95,13 +101,15 @@ ShallowWrapper {
             encodeSpecialCharacters={true}
           >
             <title>
-              Game of Life
+              Tic-Tac-Toe
             </title>
           </HelmetWrapper>,
           <Gx
             col={12}
           >
-            <Board />
+            <TicTacBoard
+              size={3}
+            />
           </Gx>,
         ],
       },
@@ -113,7 +121,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <title>
-              Game of Life
+              Tic-Tac-Toe
             </title>,
             "defer": true,
             "encodeSpecialCharacters": true,
@@ -124,10 +132,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Game of Life",
+              "children": "Tic-Tac-Toe",
             },
             "ref": null,
-            "rendered": "Game of Life",
+            "rendered": "Tic-Tac-Toe",
             "type": "title",
           },
           "type": [Function],
@@ -137,15 +145,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Board />,
+            "children": <TicTacBoard
+              size={3}
+            />,
             "col": 12,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
+            "nodeType": "class",
+            "props": Object {
+              "size": 3,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],

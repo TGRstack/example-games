@@ -1,4 +1,4 @@
-import { arrDiags, arrMatrix, sumArray, transf90 } from './../helpers/array' // , flatArray
+import { arrDiags, arrMatrix, sumArray, transf90 } from '../helpers/array' // , flatArray
 
 interface IProps {
   size?: number,
@@ -18,6 +18,7 @@ export default class TicTacToeSimulator {
   turns = 0
   status: 'new' | 'dirty' | 'inc' | 'fin' | 'tie' = 'new'
   winningPositions?: number[]
+  error = false
 
   constructor({
     size = 3,
@@ -33,21 +34,29 @@ export default class TicTacToeSimulator {
   onTurn(move: IXYPosition) {
     // IF status === new || inc
     this.currMove = move
-    this.performMove()
+    if (this.checkNewMove()) {
+      this.performMove()
 
-    this.isEnoughTurns()
-    const enoughMoves = this.status === 'inc'
-    if (enoughMoves && this.isWinner()) {
-      // stop game
-      this.declareWinner()
-    } else if (enoughMoves && this.isTied()) {
-      // stop game
-      this.status = 'fin'
+      this.isEnoughTurns()
+      const enoughMoves = this.status === 'inc'
+      if (enoughMoves && this.isWinner()) {
+        // stop game
+        this.declareWinner()
+      } else if (enoughMoves && this.isTied()) {
+        // stop game
+        this.status = 'fin'
 
+      } else {
+        // continue game
+        this.nextPlayer()
+      }
     } else {
-      // continue game
-      this.nextPlayer()
+      this.error = true
     }
+  }
+  checkNewMove() {
+    const {y, x} = this.currMove
+    return this.grid[y][x] === 0
   }
   performMove() {
     const {y, x} = this.currMove
@@ -70,9 +79,9 @@ export default class TicTacToeSimulator {
   }
   isTied() {
     const maxMoves = this.turns === (this.width * this.height)
-    // TODO: check if a win is possible, otherwise tie
+    // TODO:  const winsPossible =
 
-    return maxMoves
+    return maxMoves // || winsPossible
   }
   isWinner() {
     const isAcross = this.isWinnerAcross()
