@@ -1,4 +1,4 @@
-import * as cloneDeep from 'lodash.clonedeep'
+// // import * as cloneDeep from 'lodash.clonedeep'
 import * as deepEqual from 'lodash.isequal'
 import * as React from 'react'
 import { ICell } from '.'
@@ -47,7 +47,7 @@ export default class GameBoard extends React.Component<IProps, IState> {
   initBoard = () => Array.from(Array(this.props.height)).map(() => Array.from(Array(this.props.width)))
 
   updateBoard = (board: BoardGrid): BoardGrid => {
-    const newBoard = cloneDeep(board)
+    // const newBoard = cloneDeep(board)
     this.props.positions.forEach(cell => {
       const {x, y, value} = cell
       newBoard[y][x] = value

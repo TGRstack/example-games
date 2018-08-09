@@ -8,11 +8,8 @@ interface IXYPosition {
 }
 
 function findFreqOf(arr: number[], target: number) {
-  const frequency = {}
-  for (const v in arr) {
-    frequency[arr[v]] = (frequency[arr[v]] || 0) + 1
-  }
-
+  const frequency: {[key: number]: number} = {}
+  arr.forEach(v => frequency[v] = (frequency[v] || 0) + 1)
   return frequency[target]
 }
 
@@ -27,7 +24,6 @@ export default class LifeSimulator {
     this.grid = grid
     this.height = grid.length
     this.width = grid[0].length
-
   }
 
   getNeighbors(pos: IXYPosition) {
