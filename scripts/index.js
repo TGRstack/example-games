@@ -47,6 +47,22 @@ const shortcuts = {
     default: 'nps lint.fix',
     description: 'Fix lint errors.',
   },
+  type: {
+    default: 'nps lint.type',
+    description: 'All TypeScript Errors.',
+  },
+  t: {
+    default: 'nps test',
+    description: 'Run tests.',
+  },
+  tu: {
+    default: 'nps test.update',
+    description: 'Update test snapshots.',
+  },
+  tw: {
+    default: 'nps test.watch',
+    description: 'Run test watcher.',
+  },
   // FIXME: w/ a prompt. We don't want to run this accidentally!
   //   https://stackoverflow.com/q/50770212/604950
   // r: {

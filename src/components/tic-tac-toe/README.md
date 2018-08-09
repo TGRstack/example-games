@@ -49,13 +49,22 @@
 
 - GAME: controls
   - [ ] start new game
-  - [ ] toggle renderMatchHistoryTable()
 
 - TEST Gameplay
   - [ ] determineWinner
   - [ ] determineTie
 
 ### ADDONs
+
+- GAME: core
+  - [ ] winner not possible (even if spaces are available)
+
+- GAME: controls
+  - [ ] toggle renderMatchHistoryTable()
+
+- GAME: configuration
+  - [ ] connect 4
+  - [ ] connect N
 
 - GAME: match history table
   - [ ] add scores for P1 & P2 to the Header

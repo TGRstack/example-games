@@ -46,7 +46,7 @@ export default class GameBoard extends React.Component<IProps, IState> {
 
   initBoard = () => Array.from(Array(this.props.height)).map(() => Array.from(Array(this.props.width)))
 
-  updateBoard = (board: BoardGrid): BoardGrid => {
+  updateBoard = (_board: BoardGrid): BoardGrid => {
     // const newBoard = cloneDeep(board)
     this.props.positions.forEach(cell => {
       const {x, y, value} = cell
