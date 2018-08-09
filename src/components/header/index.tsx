@@ -13,6 +13,7 @@ class HeaderIndex extends React.Component<{}, {}> {
     ]
     const right = [
       <Link to="/game-of-life">Life</Link>, // tslint:disable-line jsx-key
+      <Link to="/tic-tac-toe">TicTacToe</Link>, // tslint:disable-line jsx-key
     ]
 
     return <Header leftItems={left} rightItems={right}/>

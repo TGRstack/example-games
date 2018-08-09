@@ -15,7 +15,8 @@ function HomeEntrancePage() {
 
       <Gx col={12}>
         <List ordered>
-          {Hello('Click "Life" to get Started"')}
+          {Hello('"Game of Life" to get Started')}
+          {Hello('"Tic Tac Toe" for some interactive fun')}
         </List>
       </Gx>
     </div>

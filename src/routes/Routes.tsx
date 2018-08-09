@@ -3,12 +3,14 @@ import { Route, Switch } from 'react-router-dom'
 import Error404 from './Error404'
 import GameOfLife from './GameOfLife'
 import Home from './Home'
+import TicTacToe from './TicTacToe'
 
 class Routes extends React.Component<{}, {}> {
   render() {
     return <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/game-of-life" component={GameOfLife} />
+      <Route exact path="/tic-tac-toe" component={TicTacToe} />
       <Route component={Error404} />
     </Switch>
   }

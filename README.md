@@ -58,8 +58,7 @@ src/
 ├── helpers/      - useful functions
 ├── middlewares/  - third-party HOC functionality (apollo, router)
 ├── modules/      - first-party modules
-    ├── gx        - author hasn't published rc4 which fixes a broken package
-    ├── wizard    - prototyping the module before extracting it to its own module
+    ├── game      - prototyping the module before extracting it to its own module
 ├── routes/       - define page for a route
 ├── types/        - ts modules, common, interfaces
 ```
