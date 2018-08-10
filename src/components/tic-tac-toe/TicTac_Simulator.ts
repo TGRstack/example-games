@@ -35,6 +35,7 @@ export default class TicTacToeSimulator {
     // IF status === new || inc
     this.currMove = move
     if (this.checkNewMove()) {
+      this.error = false
       this.performMove()
 
       this.isEnoughTurns()
@@ -44,7 +45,7 @@ export default class TicTacToeSimulator {
         this.declareWinner()
       } else if (enoughMoves && this.isTied()) {
         // stop game
-        this.status = 'fin'
+        this.status = 'tie'
 
       } else {
         // continue game
