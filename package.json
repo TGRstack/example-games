@@ -22,7 +22,8 @@
     "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
     "react-router-dom": "4.3.1",
-    "url-search-params": "1.0.2"
+    "url-search-params": "1.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.51",
@@ -77,7 +78,9 @@
   "scripts": {
     "start": "nps",
     "test": "nps test",
-    "help": "nps help"
+    "help": "nps help",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "config": {
     "cz-emoji": {
@@ -101,5 +104,6 @@
   "bugs": {
     "url": "https://github.com/Falieson/tgr-example-wizards/issues"
   },
-  "homepage": "https://github.com/Falieson/tgr-example-wizards#readme"
+  "homepage": "https://github.com/Falieson/tgr-example-wizards#readme",
+  "snyk": true
 }
